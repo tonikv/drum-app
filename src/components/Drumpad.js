@@ -15,7 +15,7 @@ const Drumpad = ( {stringID, sound}) => {
 
             <button 
                 className="drum-pad"
-                onClick={() => play}
+                onClick={play}
                 >
                 {stringID} 
             </button>
