@@ -1,28 +1,72 @@
 import React from 'react'
 import './App.css'
-import Qsound from './sounds/Q.wav'
-import Wsound from './sounds/W.wav'
-import Esound from './sounds/E.wav'
-import Asound from './sounds/A.wav'
-import Ssound from './sounds/S.wav'
-import Dsound from './sounds/D.wav'
-import Zsound from './sounds/Z.wav'
-import Xsound from './sounds/X.wav'
-import Csound from './sounds/C.wav'
-import Drumpad from './components/Drumpad'
+
+import DrumPad from './components/DrumPad'
+import PadBank from './components/PadBank';
+
+const bankOne = [
+  {
+    keyCode: 81,
+    keyTrigger: 'Q',
+    id: 'Heater-1',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
+  },
+  {
+    keyCode: 87,
+    keyTrigger: 'W',
+    id: 'Heater-2',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
+  },
+  {
+    keyCode: 69,
+    keyTrigger: 'E',
+    id: 'Heater-3',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+  },
+  {
+    keyCode: 65,
+    keyTrigger: 'A',
+    id: 'Heater-4',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
+  },
+  {
+    keyCode: 83,
+    keyTrigger: 'S',
+    id: 'Clap',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
+  },
+  {
+    keyCode: 68,
+    keyTrigger: 'D',
+    id: 'Open-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
+  },
+  {
+    keyCode: 90,
+    keyTrigger: 'Z',
+    id: "Kick-n'-Hat",
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+  },
+  {
+    keyCode: 88,
+    keyTrigger: 'X',
+    id: 'Kick',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+  },
+  {
+    keyCode: 67,
+    keyTrigger: 'C',
+    id: 'Closed-HH',
+    url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+  }
+];
 
 function App() {
   return (
     <div id="drum-machine" className="container">
-      <Drumpad stringID="Q" sound={Qsound}/>
-      <Drumpad stringID="W" sound={Wsound}/>
-      <Drumpad stringID="E" sound={Esound}/>
-      <Drumpad stringID="A" sound={Asound}/>
-      <Drumpad stringID="S" sound={Ssound}/>
-      <Drumpad stringID="D" sound={Dsound}/>
-      <Drumpad stringID="Z" sound={Zsound}/>
-      <Drumpad stringID="X" sound={Xsound}/>
-      <Drumpad stringID="C" sound={Csound}/>
+      <PadBank 
+        sounds={bankOne}
+      />
     </div>
   )
 }
