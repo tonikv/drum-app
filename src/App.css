@@ -1,0 +1,44 @@
+:root {
+  /* CSS HSL */
+--cerulean-blue: hsla(226, 46%, 46%, 1);
+--cerulean-frost: hsla(208, 43%, 59%, 1);
+--middle-blue-green: hsla(162, 45%, 72%, 1);
+--cultured: hsla(160, 10%, 94%, 1);
+--maximum-yellow-red: hsla(40, 89%, 61%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--cerulean-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-top: 10px;
+  padding: 10px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
+  color: white;
+  background-color: var(--cerulean-frost);
+}
+
+.drum-pad {
+  border-radius: 2px;
+  background-color: var(--maximum-yellow-red);
+  outline: none;
+  border: none;
+}
+
+.drum-pad:hover {
+  background-color: black;
+  color: white;
+}
