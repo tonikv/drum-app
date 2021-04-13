@@ -1,6 +1,8 @@
 
 const Drumpad = ( {stringID, sound}) => {
+    console.log("polku -->", sound)
     let soundEL = document.getElementById(`${stringID}`)
+    console.log(soundEL)
 
     return (
         <>
