@@ -1,7 +1,7 @@
 import React from 'react'
 import Drumpad from './DrumPad';
 
-const PadBank = ( {sounds} ) => {
+const PadBank = ( {sounds, handleChange} ) => {
     let padBank;
     padBank = sounds.map((drumObj, i, padBankArr) => {
         return (
@@ -10,6 +10,7 @@ const PadBank = ( {sounds} ) => {
                 clipId={padBankArr[i].id}
                 keyCode={padBankArr[i].keyCode}
                 keyTrigger={padBankArr[i].keyTrigger}
+                handleChange={handleChange}
             />
         );
     });

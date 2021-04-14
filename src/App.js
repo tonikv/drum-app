@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-import DrumPad from './components/DrumPad'
 import PadBank from './components/PadBank';
+import Display from './components/Display';
 
 const bankOne = [
   {
@@ -61,11 +61,21 @@ const bankOne = [
   }
 ];
 
+
 function App() {
+  const[current, setCurrent] = useState("Soitin");
+
+  function handleChange(id) {
+    console.log("mita on idssa:", id)
+    setCurrent(id);
+  }
+
   return (
     <div id="drum-machine" className="container">
+      <Display current={current}/>
       <PadBank 
         sounds={bankOne}
+        handleChange={handleChange}
       />
     </div>
   )
