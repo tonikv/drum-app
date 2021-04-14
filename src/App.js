@@ -66,7 +66,6 @@ function App() {
   const[current, setCurrent] = useState("Soitin");
 
   function handleChange(id) {
-    console.log("mita on idssa:", id)
     setCurrent(id);
   }
 

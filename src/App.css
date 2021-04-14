@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
 :root {
   /* CSS HSL */
 --cerulean-blue: hsla(226, 46%, 46%, 1);
@@ -14,6 +16,7 @@
 }
 
 body {
+  font-family: 'Roboto Mono', monospace;
   background-color: var(--cerulean-blue);
   display: flex;
   justify-content: center;
@@ -36,18 +39,20 @@ body {
   padding-top: 20px;
   background-color:  var(--cerulean-frost);
   text-align: center;
+  color: black;
 }
 
 .drum-pad {
-  padding-top: 35px;
+  padding-top: 40px;
   text-align: center;
   border-radius: 2px;
-  background-color: var(--maximum-yellow-red);
+  background-color: black;
   outline: none;
   border: none;
 }
 
 .drum-pad:hover {
-  background-color: black;
+  padding-top: 43px;
+  background-color: rgb(146, 145, 145);
   color: white;
 }
